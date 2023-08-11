@@ -7,30 +7,30 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(21, 91%, 17%);
-  --clr-primary-2: hsl(21, 84%, 25%);
-  --clr-primary-3: hsl(21, 81%, 29%);
-  --clr-primary-4: hsl(21, 77%, 34%);
+  --clr-primary-1: #03071e;
+  --clr-primary-2: #370617;
+  --clr-primary-3: #6a040f;
+  --clr-primary-4: #9d0208;
   /* primary/main color */
-  --clr-primary-5: hsl(21, 62%, 45%);
+  --clr-primary-5: #d00000;
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(21, 57%, 50%);
-  --clr-primary-7: hsl(21, 65%, 59%);
-  --clr-primary-8: hsl(21, 80%, 74%);
-  --clr-primary-9: hsl(21, 94%, 87%);
-  --clr-primary-10: hsl(21, 100%, 94%);
+  --clr-primary-6: #dc2f02;
+  --clr-primary-7: #e85d04;
+  --clr-primary-8: #f48c06;
+  --clr-primary-9: #faa307;
+  --clr-primary-10: #ffba08;
   /* darkest grey - used for headings */
-  --clr-grey-1: #102a42;
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
+  --clr-grey-1: #212529;
+  --clr-grey-2: #343a40;
+  --clr-grey-3: #495057;
+  --clr-grey-4: #6c757d;
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-grey-5: #adb5bd;
+  --clr-grey-6: #ced4da;
+  --clr-grey-7: #dee2e6;
+  --clr-grey-8: #dee2e6;
+  --clr-grey-9: #e9ecef;
+  --clr-grey-10: #f8f9fa;
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
