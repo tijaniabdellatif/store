@@ -97,7 +97,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-4);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -382,7 +382,7 @@ Sidebar
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-4);
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -394,7 +394,7 @@ Sidebar
   color: var(--clr-grey-1);
 }
 .sidebar-link i {
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-4);
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
@@ -445,7 +445,7 @@ Cart
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-4);
   position: absolute;
   top: 0.5rem;
   left: 1rem;
@@ -494,7 +494,7 @@ Cart
 .cart-item-remove-btn {
   background: transparent;
   border-color: transparent;
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-4);
   letter-spacing: var(--spacing);
   cursor: pointer;
 }
@@ -569,9 +569,14 @@ product
 .product-icon:hover {
   background: var(--clr-primary-7);
 }
+
+
+
 .product-container:hover .product-icons {
   opacity: 1;
+  
 }
+
 .product footer {
   padding: 0.75rem 0;
   text-align: center;
@@ -651,7 +656,7 @@ Products Page
 
 .search-input {
   padding: 0.5rem;
-  background: var(--clr-grey-10);
+  background: var(--clr-grey-9);
   border-radius: var(--radius);
   border-color: transparent;
   letter-spacing: var(--spacing);
@@ -667,7 +672,7 @@ Products Page
   background: transparent;
   border-color: transparent;
   letter-spacing: var(--spacing);
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-4);
   cursor: pointer;
   transition: var(--transition);
 }
@@ -675,8 +680,8 @@ Products Page
   color: var(--clr-grey-3);
 }
 .price-filter {
-  background: var(--clr-grey-5) !important;
-  color: var(--clr-grey-5);
+  background: var(--clr-grey-4) !important;
+  color: var(--clr-grey-4);
 }
 @media screen and (min-width: 768px) {
   .products {
@@ -686,6 +691,7 @@ Products Page
     position: sticky;
     top: 1rem;
   }
+  
 }
 @media screen and (min-width: 992px) {
   .products-container {
@@ -714,6 +720,7 @@ Products Page
   left: 0;
   width: 100%;
   text-align: center;
+  color:var(--clr-red-dark);
   margin-top: 4rem;
 }
 /*
@@ -726,7 +733,7 @@ Single Product Page
   display: grid;
   place-items: center;
   background: var(--clr-grey-10);
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-4);
 }
 .page-hero-title {
   font-weight: 500;
@@ -773,5 +780,14 @@ Single Product Page
 @media screen and (min-width: 992px) {
   .single-product-center {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .search-input {
+
+     width: 100%;
   }
 }

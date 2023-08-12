@@ -13,7 +13,18 @@ const getElement = (selection) => {
   `)
 }
 
-const formatPrice = () => {}
+const formatPrice = (price) => {
+
+  let formatedPrice = new Intl.NumberFormat('ma-MA',{
+
+     style :'currency',
+     currency:'MAD',
+    
+  }).format((price * 10).toFixed(2))
+
+  return formatedPrice;
+
+}
 const getStorageItem = (item) => {
   let storageItem = localStorage.getItem(item);
   if (storageItem) {

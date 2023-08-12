@@ -12,16 +12,13 @@ const init = async () => {
     const products = await fetchProducts();
    
     if (products) {
-      // add products to the store
       setupStore(products);
-
       const featuredProduct = store.filter((item) => {
-
            return item.rating > 4.8;
-          
+         
       }).slice(3)
 
-      console.log(featuredProduct);
+      display(featuredProduct,getElement('.featured-center'))
     }
   };
   
