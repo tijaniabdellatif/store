@@ -3,7 +3,7 @@
 const allProductsUrl = 'https://dummyjson.com/products'
 
 const singleProductUrl =
-  'https://dummyjson.com/products/1'
+  'https://dummyjson.com/products'
 
 const getElement = (selection) => {
   const element = document.querySelector(selection)

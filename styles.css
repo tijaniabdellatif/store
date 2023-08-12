@@ -7,18 +7,18 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: #03071e;
-  --clr-primary-2: #370617;
-  --clr-primary-3: #6a040f;
-  --clr-primary-4: #9d0208;
+  --clr-primary-1: #03045e;
+  --clr-primary-2: #023e8a;
+  --clr-primary-3: #0077b6;
+  --clr-primary-4: #0096c7;
   /* primary/main color */
-  --clr-primary-5: #d00000;
+  --clr-primary-5: #00b4d8;
   /* lighter shades of primary color */
-  --clr-primary-6: #dc2f02;
-  --clr-primary-7: #e85d04;
-  --clr-primary-8: #f48c06;
-  --clr-primary-9: #faa307;
-  --clr-primary-10: #ffba08;
+  --clr-primary-6: #48cae4;
+  --clr-primary-7: #90e0ef;
+  --clr-primary-8: #ade8f4;
+  --clr-primary-9: #caf0f8;
+  --clr-primary-10: #bbd0ff;
   /* darkest grey - used for headings */
   --clr-grey-1: #212529;
   --clr-grey-2: #343a40;
@@ -774,8 +774,9 @@ Single Product Page
 }
 
 .single-product-desc {
-  max-width: 25em;
+  
   line-height: 1.8;
+  text-align: justify;
 }
 @media screen and (min-width: 992px) {
   .single-product-center {
