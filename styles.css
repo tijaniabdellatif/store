@@ -723,6 +723,12 @@ Products Page
   color:var(--clr-red-dark);
   margin-top: 4rem;
 }
+
+.error {
+
+  color:var(--clr-red-dark);
+  text-align: center;
+}
 /*
 =============== 
 Single Product Page

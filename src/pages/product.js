@@ -29,9 +29,68 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     const id = window.location.search;
     const urlID = id.substring(4);
+    try {
+
+        const response = await fetch(`${singleProductUrl}/${urlID}`);
+        if(response.status >= 200 && response.status <= 299){
+
+              const product = await response.json();
+
+              /**
+               * Grab data
+               */
+
+              console.log(product);
+
+              const {id,title,price,rating,description,brand,images:img} = product;
+              productID = id;
+              const image = img[0];
+
+              /**
+               * Set values
+               */
+
+              document.title = `${title.toUpperCase()} | Store`;
+              pageTitleDOM.innerHTML = `Home / ${title.toUpperCase()}`
+              imgDOM.src = image;
+              titleDOM.innerHTML = title;
+              companyDOM.innerHTML = `By ${brand}`;
+              priceDOM.innerHTML = `${formatPrice(price)}`;
+              descDOM.textContent = description;
+
+              const starts = document.querySelectorAll('.stars i');
+              console.log(starts);
+
+              
+        }
+        else {
+
+           
+            centerDOM.innerHTML = `
+                <div class="error">
+                <h3>
+                  Sorry, Something went wrong
+                </h3>
+
+                <a href="index.html" class="btn">Back</a>
+                </div>
+            `;
+
+            Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: 'Something went wrong',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        }
+
+    }catch(error){
+
+        console.log(error);
+    }
    
-    const response = await fetch(`${singleProductUrl}/${urlID}`);
-     
+  
     loading.style.display = 'none';
 
 });
