@@ -129,6 +129,12 @@ p {
 .text-slanted {
   font-family: 'Kaushan Script', cursive;
 }
+
+.nav-logo {
+
+   width: 80px;
+   height: 60px;
+}
 .section-center {
   width: 90vw;
   max-width: var(--max-width);
@@ -247,6 +253,8 @@ Navbar
     top: 50%;
     left: 65%;
     transform: translate(-50%, -50%);
+    width:80px;
+    height: 60px;
   }
   .toggle-nav {
     display: none;
@@ -270,6 +278,8 @@ Navbar
 @media screen and (min-width: 992px) {
   .nav-logo {
     left: 50%;
+    width: 80px;
+    height: 60px;
   }
 }
 /* page navbar */
