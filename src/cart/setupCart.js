@@ -37,18 +37,16 @@ export const addToCart = (id) => {
     else {
 
         const amount = increaseAmount(id);
-        const items = cartItemsDOM.querySelectorAll('.cart-item-amount');
-
-        console.log(items);
+        const items = [...cartItemsDOM.querySelectorAll('.cart-item-amount')] ;
+        const newAmount = items.find((value) => value.dataset.id == id)
+        newAmount.textContent = amount;
     }
 
       
     displayCartItemCount();
     displayCartTotal();
     setStorageItem('cart',cart);
-      
-
-      openCart();
+    openCart();
       
 };
 
@@ -67,7 +65,7 @@ function displayCartTotal(){
 
      let total = cart.reduce((acc,item) => {
 
-            return (acc += item.price * item.amount)
+        return (acc += item.price * item.amount)
 
      },0)
 
@@ -98,8 +96,38 @@ function displayCartItemsDOM(){
         return newAmount;
   }
 
+
+  function removeItem(id){
+
+    cart = cart.filter((item) => {
+         return item.id !== parseInt(id);
+    })
+  }
+
 function setupCartProcess(){
 
+     cartItemsDOM.addEventListener('click',(e) => {
+
+         const element = e.target;
+         const parent = e.target.parentElement;
+         const id = e.target.dataset.id;
+         const parentID = e.target.parentElement.dataset.id;
+
+           //remove 
+             if(element.classList.contains('cart-item-remove-btn')){
+
+                 removeItem(id);
+                 //parent.parentElement.remove();
+                 element.parentElement.parentElement.remove();
+             }
+           //increase 
+           //decrease
+
+          displayCartItemCount();
+          displayCartTotal();
+          setStorageItem('cart',cart);
+
+     })
 
 }
 const init = () => {

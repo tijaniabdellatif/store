@@ -508,6 +508,12 @@ Cart
   color: var(--clr-grey-4);
   letter-spacing: var(--spacing);
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.cart-item-remove-btn:hover {
+
+   color:var(--clr-red-light);
 }
 .cart-item-amount {
   margin-bottom: 0;
