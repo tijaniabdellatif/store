@@ -79,12 +79,10 @@ function displayCartItemsDOM(){
     })
 }
 
-  function increaseAmount(id){
+function increaseAmount(id){
 
       let newAmount;
-
         cart = cart.map((item) => {
-
               if(item.id === parseInt(id)){
                 newAmount = item.amount + 1
                     item = {...item,amount:newAmount}
@@ -95,6 +93,21 @@ function displayCartItemsDOM(){
 
         return newAmount;
   }
+
+  function decreaseAmount(id){
+
+    let newAmount;
+      cart = cart.map((item) => {
+            if(item.id === parseInt(id)){
+              newAmount = item.amount - 1
+                  item = {...item,amount:newAmount}
+            }
+
+            return item;
+      })
+
+      return newAmount;
+}
 
 
   function removeItem(id){
@@ -117,11 +130,30 @@ function setupCartProcess(){
              if(element.classList.contains('cart-item-remove-btn')){
 
                  removeItem(id);
-                 //parent.parentElement.remove();
                  element.parentElement.parentElement.remove();
              }
            //increase 
+           if(parent.classList.contains('cart-item-increase-btn')){
+               const newAmount = increaseAmount(parentID);
+               parent.nextElementSibling.textContent = newAmount;   
+           }
            //decrease
+
+           if(parent.classList.contains('cart-item-decrease-btn')){
+
+            const newAmount = decreaseAmount(parentID);
+            if(newAmount === 0){
+              removeItem(id);
+              parent.parentElement.parentElement.remove();
+            }
+            else {
+
+                 parent.previousElementSibling.textContent = newAmount;
+            }
+
+           }
+
+
 
           displayCartItemCount();
           displayCartTotal();
