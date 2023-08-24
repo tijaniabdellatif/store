@@ -7,18 +7,18 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: #03071e;
-  --clr-primary-2: #370617;
-  --clr-primary-3: #6a040f;
-  --clr-primary-4: #9d0208;
+  --clr-primary-1: #03045e;
+  --clr-primary-2: #023e8a;
+  --clr-primary-3: #0077b6;
+  --clr-primary-4: #0096c7;
   /* primary/main color */
-  --clr-primary-5: #d00000;
+  --clr-primary-5: #00b4d8;
   /* lighter shades of primary color */
-  --clr-primary-6: #dc2f02;
-  --clr-primary-7: #e85d04;
-  --clr-primary-8: #f48c06;
-  --clr-primary-9: #faa307;
-  --clr-primary-10: #ffba08;
+  --clr-primary-6: #48cae4;
+  --clr-primary-7: #90e0ef;
+  --clr-primary-8: #ade8f4;
+  --clr-primary-9: #caf0f8;
+  --clr-primary-10: #bbd0ff;
   /* darkest grey - used for headings */
   --clr-grey-1: #212529;
   --clr-grey-2: #343a40;
@@ -128,6 +128,12 @@ p {
 }
 .text-slanted {
   font-family: 'Kaushan Script', cursive;
+}
+
+.nav-logo {
+
+   width: 80px;
+   height: 60px;
 }
 .section-center {
   width: 90vw;
@@ -247,6 +253,8 @@ Navbar
     top: 50%;
     left: 65%;
     transform: translate(-50%, -50%);
+    width:80px;
+    height: 60px;
   }
   .toggle-nav {
     display: none;
@@ -270,6 +278,8 @@ Navbar
 @media screen and (min-width: 992px) {
   .nav-logo {
     left: 50%;
+    width: 80px;
+    height: 60px;
   }
 }
 /* page navbar */
@@ -461,6 +471,7 @@ Cart
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 500;
+  font-size: 14px;
 }
 .cart-checkout {
   display: block;
@@ -497,6 +508,12 @@ Cart
   color: var(--clr-grey-4);
   letter-spacing: var(--spacing);
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.cart-item-remove-btn:hover {
+
+   color:var(--clr-red-light);
 }
 .cart-item-amount {
   margin-bottom: 0;
@@ -723,6 +740,12 @@ Products Page
   color:var(--clr-red-dark);
   margin-top: 4rem;
 }
+
+.error {
+
+  color:var(--clr-red-dark);
+  text-align: center;
+}
 /*
 =============== 
 Single Product Page
@@ -774,8 +797,9 @@ Single Product Page
 }
 
 .single-product-desc {
-  max-width: 25em;
+  
   line-height: 1.8;
+  text-align: justify;
 }
 @media screen and (min-width: 992px) {
   .single-product-center {
